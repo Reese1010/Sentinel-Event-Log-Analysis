@@ -6,14 +6,7 @@ I began the investigation by identifying repeated failed login attempts against 
 
 🔍 Outcome:
 Multiple accounts experienced a high volume of failed login attempts within the same hour:
-
-Account	Device	Time	Failed Attempts
-\ADMINISTRATOR	SOC-FW-RDP	5/20/2025, 10:00 PM UTC	9997
-\admin	SHIR-Hive	5/20/2025, 10:00 PM UTC	1988
-\administrator	SHIR-Hive	5/20/2025, 10:00 PM UTC	1740
-\USER	SOC-FW-RDP	5/20/2025, 10:00 PM UTC	269
-\TEST	SOC-FW-RDP	5/20/2025, 10:00 PM UTC	263
-\SERVER	SOC-FW-RDP	5/20/2025, 10:00 PM UTC	240
+Over 9,000 failed login attempts were detected from the \ADMINISTRATOR account on a Windows-based system (SOC-FW-RDP). Additionally, nearly 2,000 failed attempts were made using the \admin account and over 1,700 attempts using the \administrator account on another Windows VM (SHIR-Hive). Other generic accounts such as \USER also experienced elevated failed login attempts, further suggesting a potential brute-force attack campaign.
 
 🧠 Insight:
 This login pattern strongly suggests a brute-force attack, with thousands of failed login attempts against administrative and generic accounts. Notably:
