@@ -1,28 +1,33 @@
 # Sentinel-Event-Log-Analysis
 
-🔍Suspicious Login:
+📘 Overview
+This project focuses on detecting suspicious login activity in Windows-based systems by analyzing event logs ingested into Microsoft Sentinel. The main objective is to identify brute-force login attempts by looking for repeated failed login attempts from the same accounts within short time windows, a common early indicator of malicious activity.
 
-Step 1: 🚫 Brute-Force Login Attempts
+🧰 Tools & Environment
+Microsoft Sentinel (Azure-based SIEM)
 
-I began the investigation by identifying repeated failed login attempts against accounts within a narrow time window, which is often indicative of a brute-force attack.
+Windows Virtual Machines generating SecurityEvent logs
 
-🔍 Outcome:
-Multiple accounts experienced a high volume of failed login attempts within the same hour:
-Over 9,000 failed login attempts were detected from the \ADMINISTRATOR account on a Windows-based system (SOC-FW-RDP). Additionally, nearly 2,000 failed attempts were made using the \admin account and over 1,700 attempts using the \administrator account on another Windows VM (SHIR-Hive). Other generic accounts such as \USER also experienced elevated failed login attempts, further suggesting a potential brute-force attack campaign.
+Kusto Query Language (KQL) for log queries and analysis
 
-🧠 Insight:
-This login pattern strongly suggests a brute-force attack, with thousands of failed login attempts against administrative and generic accounts. Notably:
+✅ Step 1: Detecting Brute-Force Login Attempts
+Queried failed login events (EventID 4625) from multiple accounts.
 
-Administrator-level accounts like \ADMINISTRATOR, \admin, and \administrator were targeted heavily.
+Grouped failed attempts by Account, Device, and 1-hour time bins.
 
-Generic/default accounts (\USER, \TEST, \SERVER) were also probed, indicating a broad login spray.
+Filtered to highlight accounts with unusually high failed login counts.
 
-These findings reinforce the need for:
+Outcome:
+Over 9,000 failed login attempts were detected from the \ADMINISTRATOR account on the Windows VM SOC-FW-RDP. Additionally, nearly 2,000 attempts targeted the \admin account, and over 1,700 attempts hit the \administrator account on the SHIR-Hive VM. Generic accounts such as \USER also experienced elevated failed login attempts, indicating a possible brute-force attack campaign.
 
-Strong password policies
+Insight:
+These findings reveal a clear pattern of brute-force activity, focusing primarily on administrative accounts but also probing generic accounts. This underscores the importance of:
 
-Account lockout mechanisms
+Implementing strong password policies
 
-Disabling unused/default accounts
+Enforcing account lockout after multiple failed attempts
 
-Monitoring authentication logs continuously
+Continuously monitoring authentication logs for suspicious behavior
+
+
+
