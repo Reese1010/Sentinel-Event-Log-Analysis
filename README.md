@@ -1,10 +1,8 @@
 # Sentinel-Event-Log-Analysis
 
-Suspicious Login Story Arc: A Lab Walkthrough
+Suspicious Login:
 Step 1: 🚫 Brute-Force Login Attempts
 I began the investigation by identifying repeated failed login attempts against accounts within a narrow time window, which is often indicative of a brute-force attack.
-
-✅ Query: Brute Force Login Detection (Windows Security Logs)
 
 🔍 Outcome:
 Multiple accounts experienced a high volume of failed login attempts within the same hour:
