@@ -1,7 +1,9 @@
 # Sentinel-Event-Log-Analysis
 
-Suspicious Login:
+🔍Suspicious Login:
+
 Step 1: 🚫 Brute-Force Login Attempts
+
 I began the investigation by identifying repeated failed login attempts against accounts within a narrow time window, which is often indicative of a brute-force attack.
 
 🔍 Outcome:
