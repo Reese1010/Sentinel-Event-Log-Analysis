@@ -30,3 +30,16 @@ This project focuses on detecting **suspicious login activity** in Windows-based
  > - Continuously **monitoring authentication logs** for suspicious behavior  
 
 ![Brute Force Login Attempts](images/brute_force_login.png)
+
+---
+
+### ✅ Step 2: Successful Login After Failures
+
+After detecting brute-force login attempts, I ran a query to check whether any of those accounts eventually logged in successfully — a strong signal of potential compromise.
+
+ **🔍 Outcome:**  
+> The query returned **no results**, indicating that none of the accounts experiencing suspected brute-force login attempts successfully logged in afterward during the observed time frame.
+
+> **🧠 Insight:**  
+> This strongly suggests that, despite multiple failed attempts, these accounts were **not compromised**. This insight helps SOC teams focus on confirmed breaches and avoid false alarms, improving incident response efficiency.
+
