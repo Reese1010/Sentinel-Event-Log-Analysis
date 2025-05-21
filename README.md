@@ -19,12 +19,12 @@ This project focuses on detecting **suspicious login activity** in Windows-based
  > - Grouped failed attempts by **Account, Device, and 1-hour time bins**.  
  > - Filtered to highlight accounts with **unusually high failed login counts**.
 
-  ### **Outcome:**  
+  ### 🔍 **Outcome:**  
   - Over **9,000 failed login attempts** were detected from the **`\ADMINISTRATOR`** account on the Windows VM **SOC-FW-RDP**. Additionally, nearly **2,000 attempts** targeted the **`\admin`** account, and over **1,700 attempts** hit the 
-  **`\administrator`** account on the **SHIR-Hive** VM. Generic accounts such as **`\USER`** also experienced numerous failed login attempts, indicating a possible brute-force attack campaign.
+  **`\administrator`** account on the **SHIR-Hive** VM. This indicates a strong brute-force attack campaign focused on administrative accounts.
 
 
-  ### **Insight:**  
+  ### 💡 **Insight:**  
   These findings reveal a clear pattern of **brute-force activity**, focusing primarily on **administrative accounts** but also probing **generic accounts**. This underscores the importance of:  
  > - Implementing **strong password policies**  
  > - Enforcing **account lockout** after multiple failed attempts    
