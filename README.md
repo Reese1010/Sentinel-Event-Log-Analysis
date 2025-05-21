@@ -25,8 +25,9 @@ This project focuses on detecting **suspicious login activity** in Windows-based
 
 
   ### 💡 **Insight:**  
-    These findings reveal a clear pattern of **brute-force activity**, focusing primarily on **administrative accounts** but also probing **generic accounts**. This underscores the importance of:  
+   These findings reveal a clear pattern of **brute-force activity**, focusing primarily on **administrative accounts** but also probing **generic accounts**. This underscores the importance of:  
  > - Implementing **strong password policies**  
  > - Enforcing **account lockout** after multiple failed attempts    
  > - Continuously **monitoring authentication logs** for suspicious behavior  
 
+![Brute Force Login Attempts](images/brute_force_login.png)
