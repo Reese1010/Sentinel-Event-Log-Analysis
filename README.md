@@ -15,9 +15,9 @@ This project focuses on detecting **suspicious login activity** in Windows-based
 
 ### ✅ **Step 1: Detecting Brute-Force Login Attempts**
 
- > - Queried **failed login events** (`EventID 4625`) from multiple accounts.  
- > - Grouped failed attempts by **Account, Device, and 1-hour time bins**.  
- > - Filtered to highlight accounts with **unusually high failed login counts**.
+  - Queried **failed login events** (`EventID 4625`) from multiple accounts.  
+  - Grouped failed attempts by **Account, Device, and 1-hour time bins**.  
+  - Filtered to highlight accounts with **unusually high failed login counts**.
 
   ### 🔍 **Outcome:**  
   - Over **9,000 failed login attempts** were detected from the **`\ADMINISTRATOR`** account on the Windows VM **SOC-FW-RDP**. Additionally, nearly **2,000 attempts** targeted the **`\admin`** account, and over **1,700 attempts** hit the 
@@ -35,7 +35,7 @@ This project focuses on detecting **suspicious login activity** in Windows-based
 
 ### 🚫 Step 2: No Successful Logins After Failed Attempts
 
- > - After detecting brute-force login attempts, I ran a query to check whether any of those accounts eventually logged in successfully — a strong signal of potential compromise.
+  - After detecting brute-force login attempts, I ran a query to check whether any of those accounts eventually logged in successfully — a strong signal of potential compromise.
 
   ### 🔍 **Outcome:**  
    - The query returned **no results**, indicating that none of the accounts experiencing suspected brute-force login attempts successfully logged in afterward during the observed time frame.
