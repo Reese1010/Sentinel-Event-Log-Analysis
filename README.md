@@ -43,6 +43,8 @@ This project focuses on detecting **suspicious login activity** in Windows-based
   ### 💡 **Insight:**  
    - This strongly suggests that, despite multiple failed attempts, these accounts were **not compromised**. This insight helps SOC teams focus on confirmed breaches and avoid false alarms, improving incident response efficiency.
 
+![Successful_Login Attempts](images/brute_force_login.png)
+
 ---
 
 MITRE Techniques Observed
@@ -54,9 +56,7 @@ T1110.001 – Brute Force: Password Guessing
 ### 🧠 I demonstrated the ability to:
 
 - Use KQL to uncover brute-force patterns
-
 - Interpret logon events in a security context
-
 - Present investigation findings clearly and effectively
 
 
