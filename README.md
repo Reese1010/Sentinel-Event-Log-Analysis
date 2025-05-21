@@ -29,7 +29,7 @@ This project focuses on detecting **suspicious login activity** in Windows-based
   - Enforcing **account lockout** after multiple failed attempts    
   - Continuously **monitoring authentication logs** for suspicious behavior  
 
-![Brute Force Login Attempts](images/brute_force_login.png)
+![Brute Force Login Attempts](FailedLogon.png)
 
 ---
 
@@ -43,7 +43,7 @@ This project focuses on detecting **suspicious login activity** in Windows-based
   ### 💡 **Insight:**  
    - This strongly suggests that, despite multiple failed attempts, these accounts were **not compromised**. This insight helps SOC teams focus on confirmed breaches and avoid false alarms, improving incident response efficiency.
 
-![Successful_Login Attempts](images/brute_force_login.png)
+![Successful_Login Attempts](SuccessLogon.png)
 
 ---
 
